@@ -1,0 +1,18 @@
+/* Navbar icon hover: icons are hidden by default and appear in gold/amber on hover */
+.nav-list { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.5rem; }
+.nav-link { display: inline-flex; align-items: center; gap: .5rem; padding: .25rem .5rem; color: inherit; text-decoration: none; }
+.nav-link .icon { opacity: 0; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease, color .18s ease; display: inline-flex; align-items: center; }
+.nav-link:hover .icon { opacity: 1; transform: translateY(0); color: #F5B21B; }
+.nav-link .label { transition: color .18s ease; }
+.nav-link:hover .label { color: #F5B21B; }
+
+/* Active state: when a link is active (or has aria-current="page"), show icon and color it amber */
+.nav-link.active .icon,
+.nav-link[aria-current="page"] .icon {
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+	color: #F5B21B;
+}
+.nav-link.active .label,
+.nav-link[aria-current="page"] .label { color: #F5B21B; }
+

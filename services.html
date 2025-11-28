@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Services — HADA Investment</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+	<nav class="fixed top-0 inset-x-0 z-50 bg-[#0A2342]">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16">
+				<div class="flex items-center">
+					<a href="index.html" class="text-white text-lg font-semibold">
+                        <span class=""><img class="h-16 w-auto" src="assets/logo/logo.jpg" alt=""></span>
+                    </a>
+				</div>
+				<div class="flex md:hidden">
+					<button id="nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white">
+						<svg id="nav-open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+						<svg id="nav-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+				<div class="hidden md:block">
+					<div class="ml-10 flex items-baseline space-x-6">
+						<a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link"> 
+							<span class="icon" aria-hidden="true">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3 11.5L12 4l9 7.5"></path>
+									<path d="M9 21V12h6v9"></path>
+								</svg>
+							</span>
+							<span class="label">HOME</span>
+						</a>
+						<a href="about.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link">
+							<span class="icon" aria-hidden="true">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="12" cy="12" r="10"></circle>
+									<path d="M12 8v4"></path>
+									<path d="M12 16h.01"></path>
+								</svg>
+							</span>
+							<span class="label">ABOUT</span>
+						</a>
+						<a href="services.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link" aria-current="page">
+							<span class="icon" aria-hidden="true">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+									<circle cx="12" cy="7" r="4"></circle>
+								</svg>
+							</span>
+							<span class="label">SERVICES</span>
+						</a>
+						<a href="projects.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link">
+							<span class="icon" aria-hidden="true">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3 7h18"></path>
+									<path d="M21 7v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7"></path>
+									<path d="M7 7V3h10v4"></path>
+								</svg>
+							</span>
+							<span class="label">PROJECTS</span>
+						</a>
+						<a href="contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link">
+							<span class="icon" aria-hidden="true">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21 8V7l-3 2-2-1-4 3-4-3-2 1-3-2v1l3 2 2-1 4 3 4-3 2 1 3-2z"></path>
+									<rect x="3" y="7" width="18" height="13" rx="2"></rect>
+								</svg>
+							</span>
+							<span class="label">CONTACT</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="mobile-menu" class="md:hidden hidden">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<a href="index.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link" aria-current="page">
+					<span class="icon" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 11.5L12 4l9 7.5"></path>
+							<path d="M9 21V12h6v9"></path>
+						</svg>
+					</span>
+					<span class="label">HOME</span>
+				</a>
+				<a href="about.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+					<span class="icon" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="12" cy="12" r="10"></circle>
+							<path d="M12 8v4"></path>
+							<path d="M12 16h.01"></path>
+						</svg>
+					</span>
+					<span class="label">ABOUT</span>
+				</a>
+				<a href="services.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+					<span class="icon" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+							<circle cx="12" cy="7" r="4"></circle>
+						</svg>
+					</span>
+					<span class="label">SERVICES</span>
+				</a>
+				<a href="projects.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+					<span class="icon" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 7h18"></path>
+							<path d="M21 7v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7"></path>
+							<path d="M7 7V3h10v4"></path>
+						</svg>
+					</span>
+					<span class="label">PROJECTS</span>
+				</a>
+				<a href="contact.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+					<span class="icon" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 8V7l-3 2-2-1-4 3-4-3-2 1-3-2v1l3 2 2-1 4 3 4-3 2 1 3-2z"></path>
+							<rect x="3" y="7" width="18" height="13" rx="2"></rect>
+						</svg>
+					</span>
+					<span class="label">CONTACT</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	<main class="pt-16 p-10">
+		<h2 class="text-2xl font-bold">Our Services</h2>
+		<p class="mt-4 text-gray-700">List your services here.</p>
+	</main>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

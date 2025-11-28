@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADA-INVESTMENT-LIMITED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <nav class="fixed top-0 inset-x-0 z-50 bg-[#0A2342]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white text-lg font-semibold">
+                        <span class=""><img class="h-16 w-auto" src="assets/logo/logo.jpg" alt=""></span>
+                    </a>
+                </div>
+                <div class="flex md:hidden">
+                    <button id="nav-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white">
+                        <svg id="nav-open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="nav-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link" aria-current="page">
+                            <span class="icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 11.5L12 4l9 7.5"></path>
+                                    <path d="M9 21V12h6v9"></path>
+                                </svg>
+                            </span>
+                            <span class="label">HOME</span>
+                        </a>
+                        <a href="about.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link">
+                            <span class="icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 8v4"></path>
+                                    <path d="M12 16h.01"></path>
+                                </svg>
+                            </span>
+                            <span class="label">ABOUT</span>
+                        </a>
+                        <a href="services.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link">
+                            <span class="icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </span>
+                            <span class="label">SERVICES</span>
+                        </a>
+                        <a href="projects.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link">
+                            <span class="icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 7h18"></path>
+                                    <path d="M21 7v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7"></path>
+                                    <path d="M7 7V3h10v4"></path>
+                                </svg>
+                            </span>
+                            <span class="label">PROJECTS</span>
+                        </a>
+                        <a href="contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium nav-link">
+                            <span class="icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 8V7l-3 2-2-1-4 3-4-3-2 1-3-2v1l3 2 2-1 4 3 4-3 2 1 3-2z"></path>
+                                    <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                                </svg>
+                            </span>
+                            <span class="label">CONTACT</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link" aria-current="page">
+                    <span class="icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 11.5L12 4l9 7.5"></path>
+                            <path d="M9 21V12h6v9"></path>
+                        </svg>
+                    </span>
+                    <span class="label">HOME</span>
+                </a>
+                <a href="about.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+                    <span class="icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                        </svg>
+                    </span>
+                    <span class="label">ABOUT</span>
+                </a>
+                <a href="services.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+                    <span class="icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </span>
+                    <span class="label">SERVICES</span>
+                </a>
+                <a href="projects.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+                    <span class="icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 7h18"></path>
+                            <path d="M21 7v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7"></path>
+                            <path d="M7 7V3h10v4"></path>
+                        </svg>
+                    </span>
+                    <span class="label">PROJECTS</span>
+                </a>
+                <a href="contact.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium nav-link">
+                    <span class="icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 8V7l-3 2-2-1-4 3-4-3-2 1-3-2v1l3 2 2-1 4 3 4-3 2 1 3-2z"></path>
+                            <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        </svg>
+                    </span>
+                    <span class="label">CONTACT</span>
+                </a>
+            </div>
+        </div>
+</nav>
+<div>
+   <!-- Main content goes here -->
+    <section class="relative min-h-[60vh] md:h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/construction1.jpg');" role="region" aria-labelledby="company-heading">
+        <h2 id="company-heading" class="sr-only">HADA INVESTMENT COMPANY LIMITED</h2>
+        <!-- company description moved to About page; kept out of homepage hero -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+                <span id="typewriter" aria-live="polite"></span>
+                <span id="cursor" class="inline-block ml-2 w-1 h-8 bg-white/90"></span>
+            </h1>
+            <p class="text-white/80 max-w-2xl mx-auto text-sm md:text-lg">
+                Professional investment services tailored to your goals.
+            </p>
+        </div>
+
+        <style>
+            /* smooth cursor blink */
+            @keyframes blink {
+                0%, 49% { opacity: 1; }
+                50%, 100% { opacity: 0; }
+            }
+            #cursor { animation: blink 1s steps(2, start) infinite; }
+        </style>
+
+        <script>
+            (function () {
+                const phrases = [
+                    "Building Tanzania's infrastructure.",
+                    "Civil engineering and construction services.",
+                    "Roads, bridges, towers and maintenance.",
+                    "Your trusted partner for reliable project delivery."
+                ];
+                const el = document.getElementById('typewriter');
+                let phraseIndex = 0;
+                let charIndex = 0;
+                let deleting = false;
+
+                function tick() {
+                    const current = phrases[phraseIndex];
+                    if (!deleting) {
+                        el.textContent = current.slice(0, charIndex + 1);
+                        charIndex++;
+                        if (charIndex === current.length) {
+                            deleting = true;
+                            setTimeout(tick, 1400);
+                            return;
+                        }
+                        setTimeout(tick, 100 + Math.random() * 80);
+                    } else {
+                        el.textContent = current.slice(0, charIndex - 1);
+                        charIndex--;
+                        if (charIndex === 0) {
+                            deleting = false;
+                            phraseIndex = (phraseIndex + 1) % phrases.length;
+                            setTimeout(tick, 500);
+                            return;
+                        }
+                        setTimeout(tick, 40 + Math.random() * 40);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    // start after a short delay so background loads
+                    setTimeout(tick, 600);
+                });
+            })();
+        </script>
+    </section>
+</div>
+<div>
+    <!--this is the area showing experiences how long numer of projects and number of clients who they were happy -->
+    <section id="experience-stats" class="bg-gradient-to-b from-white to-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl md:text-5xl font-extrabold text-gray-900">Our Experience</h3>
+                <p class="mt-2 text-gray-600 max-w-2xl mx-auto md:text-xl text-sm">
+                    Decades of delivering quality construction and infrastructure projects across Tanzania.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center bg-white shadow-sm rounded-lg p-6">
+                    <div class="p-3 rounded-full   mb-3" aria-hidden="true">
+                        <!-- Years icon -->
+                        <img src="https://img.icons8.com/ios-filled/50/f5b21b/clock--v3.png" alt="">
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 stat-value" data-target="6" data-suffix="+" role="status" aria-live="polite">0</div>
+                    <div class="mt-2 text-sm text-gray-500">Years in Business</div>
+                </div>
+
+                <div class="flex flex-col items-center bg-white shadow-sm rounded-lg p-6">
+                    <div class="p-3 rounded-full   mb-3" aria-hidden="true">
+                        <!-- Projects icon -->
+                        <img src="https://img.icons8.com/ios-filled/50/f5b21b/checkmark--v1.png" alt="">
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 stat-value" data-target="18" data-suffix="+" role="status" aria-live="polite">0</div>
+                    <div class="mt-2 text-sm text-gray-500">Projects Completed</div>
+                </div>
+
+                <div class="flex flex-col items-center bg-white shadow-sm rounded-lg p-6">
+                    <div class="p-3 rounded-full   mb-3" aria-hidden="true">
+                        <!-- Clients icon -->
+                        <img src="https://img.icons8.com/small/50/f5b21b/group-foreground-selected.png" alt="">
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 stat-value" data-target="50" data-suffix="+" role="status" aria-live="polite">0</div>
+                    <div class="mt-2 text-sm text-gray-500">Satisfied Clients</div>
+                </div>
+
+                <div class="flex flex-col items-center bg-white shadow-sm rounded-lg p-6">
+                    <div class="p-3 rounded-full   mb-3" aria-hidden="true">
+                        <!-- Ongoing icon -->
+                        <img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/50/f5b21b/external-sync-arrows-tanah-basah-basic-outline-tanah-basah.png" alt="">
+                    </div>
+                    <div class="text-3xl font-bold text-gray-900 stat-value" data-target="3" role="status" aria-live="polite">0</div>
+                    <div class="mt-2 text-sm text-gray-500">Ongoing Projects</div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="projects.html" class="flex items-center hover:scale-105 justify-center px-6 py-2 rounded-md text-sm  ">
+                    <span class="text-gray-600 text-lg font-medium">View our projects</span>
+                    <span><img src="https://img.icons8.com/glyph-neue/64/f5b21b/circled-right.png" alt="https://img.icons8.com/glyph-neue/64/f5b21b/circled-right.png"></span>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                const counters = Array.from(document.querySelectorAll('.stat-value'));
+                const runCounter = (el) => {
+                    const target = Number(el.getAttribute('data-target')) || 0;
+                    const suffix = el.getAttribute('data-suffix') || '';
+                    if (prefersReduced) { el.textContent = target.toLocaleString() + suffix; return; }
+
+                    const duration = 1400;
+                    let start = null;
+                    const step = (timestamp) => {
+                        if (!start) start = timestamp;
+                        const progress = Math.min((timestamp - start) / duration, 1);
+                        const value = Math.floor(progress * target);
+                        el.textContent = value.toLocaleString() + suffix;
+                        if (progress < 1) requestAnimationFrame(step);
+                        else el.textContent = target.toLocaleString() + suffix;
+                    };
+                    requestAnimationFrame(step);
+                };
+
+                if ('IntersectionObserver' in window) {
+                    const io = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                runCounter(entry.target);
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.6 });
+
+                    counters.forEach(c => io.observe(c));
+                } else {
+                    // fallback: start immediately
+                    counters.forEach(runCounter);
+                }
+            })();
+        </script>
+    </section>
+</div>
+<div>
+    <section id="works" class="py-12 bg-gray-50" aria-labelledby="works-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="works-heading" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8 text-center">
+                Our Civil Works & Services
+            </h2>
+
+            
+            <!-- Group Cards: Education, Health, Residence, Commercial, Transport, Industrial (zigzag) -->
+            <article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-white   overflow-hidden">
+                <div class="h-56 md:h-72">
+                    <img src="assets/images/SCHOOL.jpg" alt="Students and school buildings" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <span class="inline-block bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">Education</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Schools, Hostels & Colleges</h3>
+                    <p class="text-gray-600 mb-4">
+                        Design, build and refurbish educational facilities — classrooms, dormitories, lecture halls and campus infrastructure delivered to modern standards.
+                    </p>
+                    <div class="mt-6">
+                        <a href="services.html#education" class="inline-flex items-center px-4 py-2  text-white rounded-md text-sm  transition">
+                            <span class="text-gray-700">check</span>
+                            <span><img src="https://img.icons8.com/ios-glyphs/30/f5b21b/right--v1.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-white overflow-hidden">
+                <div class="order-2 md:order-1 p-6">
+                    <span class="inline-block bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">Health</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Hospitals, Pharmacies & Laboratories</h3>
+                    <p class="text-gray-600 mb-4">
+                        Specialist healthcare construction and fit-out: clinical spaces, labs, pharmacies and support facilities with compliance-led execution.
+                    </p>
+                    <div class="mt-6">
+                        <a href="services.html#health" class="inline-flex items-center px-4 py-2  text-white rounded-md text-sm  transition">
+                            <span class="text-gray-700">check</span>
+                            <span><img src="https://img.icons8.com/ios-glyphs/30/f5b21b/right--v1.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="h-56 md:h-72 order-1 md:order-2">
+                    <img src="assets/images/HEALTH.jpg" alt="Hospital building and healthcare staff" class="w-full h-full object-cover">
+                </div>
+            </article>
+
+            <article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-white  overflow-hidden">
+                <div class="h-56 md:h-72">
+                    <img src="assets/images/APARTMENT.jpg" alt="Residential apartments and homes" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <span class="inline-block bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">Residence</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Homes, Apartments & Hotels</h3>
+                    <p class="text-gray-600 mb-4">
+                        Residential and hospitality projects including single-family homes, multi-unit apartments and hotel developments with quality finishes.
+                    </p>
+                    <div class="mt-6">
+                        <a href="services.html#residence" class="inline-flex items-center px-4 py-2  text-white rounded-md text-sm  transition">
+                            <span class="text-gray-700">check</span>
+                            <span><img src="https://img.icons8.com/ios-glyphs/30/f5b21b/right--v1.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-white  overflow-hidden">
+                <div class="order-2 md:order-1 p-6">
+                    <span class="inline-block bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">Commercial</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Halls, Malls & Markets</h3>
+                    <p class="text-gray-600 mb-4">
+                        Commercial building delivery from retail malls and market halls to event venues — efficient layouts, services coordination and durable finishes.
+                    </p>
+                    <div class="mt-6">
+                        <a href="services.html#commercial" class="inline-flex items-center px-4 py-2  text-white rounded-md text-sm  transition">
+                            <span class="text-gray-700">check</span>
+                            <span><img src="https://img.icons8.com/ios-glyphs/30/f5b21b/right--v1.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="h-56 md:h-72 order-1 md:order-2">
+                    <img src="assets/images/MALL.jpg" alt="Commercial mall interior" class="w-full h-full object-cover">
+                </div>
+            </article>
+
+            <article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-white  overflow-hidden">
+                <div class="h-56 md:h-72">
+                    <img src="assets/images/ROAD.jpg" alt="Bridge and road infrastructure" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <span class="inline-block bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">Transport</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Bridges, Roads, Airports & Rail</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transport infrastructure solutions covering bridges, roadways, airfield pavements and rail-support works — engineered for safety and longevity.
+                    </p>
+                    <div class="mt-6">
+                        <a href="services.html#transport" class="inline-flex items-center px-4 py-2  text-white rounded-md text-sm  transition">
+                            <span class="text-gray-700">check</span>
+                            <span><img src="https://img.icons8.com/ios-glyphs/30/f5b21b/right--v1.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-6 bg-white overflow-hidden">
+                <div class="order-2 md:order-1 p-6">
+                    <span class="inline-block bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold mb-3">Industrial</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Workshops, Stores & Industry</h3>
+                    <p class="text-gray-600 mb-4">
+                        Industrial and commercial fabrication sites, warehouses and workshops — practical layouts, robust structures and efficient site services construction.
+                    </p>
+                    <div class="mt-6">
+                        <a href="services.html#industrial" class="inline-flex items-center px-4 py-2  text-white rounded-md text-sm  transition">
+                            <span class="text-gray-700">check</span>
+                            <span><img src="https://img.icons8.com/ios-glyphs/30/f5b21b/right--v1.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="h-56 md:h-72 order-1 md:order-2">
+                    <img src="assets/images/INDUSTRY.jpg" alt="Industrial workshop and storage" class="w-full h-full object-cover">
+                </div>
+            </article>
+            
+        </div>
+    </section>
+</div>
+<div>
+    <section id="trusted-by" class="py-12 bg-white">
+        <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900">Trusted by</h3>
+            </div>
+
+            <ul role="list" aria-label="Logos of partner companies" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center place-items-center">
+                <li role="listitem" class="flex items-center justify-center p-4  rounded-md">
+                        <img src="assets/images/tarura.png" alt="Client 1 logo" class=" grayscale hover:grayscale-0 mx-auto max-h-16  md:max-h-20 lg:max-h-24 object-contain" loading="lazy">
+                </li>
+
+                <li role="listitem" class="flex items-center justify-center p-4  rounded-md">
+                        <img src="assets/images/tanroadlogo.png" alt="Client 2 logo" class="grayscale hover:grayscale-0 mx-auto max-h-16 md:max-h-20 lg:max-h-24 object-contain" loading="lazy">
+                </li>
+
+                <li role="listitem" class="flex items-center justify-center p-4  rounded-md">
+                        <img src="assets/images/bestone.png" alt="Client 3 logo" class="grayscale hover:grayscale-0 mx-auto max-h-16 md:max-h-20 lg:max-h-24 object-contain" loading="lazy">
+                </li>
+
+                <li role="listitem" class="flex items-center justify-center p-4  rounded-md">
+                        <img src="assets/images/tiper-logo.png" alt="Client 4 logo" class="grayscale hover:grayscale-0 mx-auto max-h-16 md:max-h-20 lg:max-h-24 object-contain" loading="lazy">
+                </li>
+
+                <li role="listitem" class="flex items-center justify-center p-4  rounded-md">
+                        <img src="assets/images/pivotec.png" alt="Client 5 logo" class="grayscale hover:grayscale-0 bg-gray-200 mx-auto  max-h-16 md:max-h-20 lg:max-h-24 object-contain" loading="lazy">
+                </li>
+
+                <li role="listitem" class="flex items-center justify-center p-4  rounded-md">
+                        <img src="assets/images/council.png" alt="Client 6 logo" class="grayscale hover:grayscale-0 mx-auto max-h-16 md:max-h-20 lg:max-h-24 object-contain" loading="lazy">
+                </li>
+            </ul>
+
+        </div>
+    </section>
+</div>
+<div>
+    <footer class="bg-[#0A2342] text-gray-100 mt-12" role="contentinfo" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Quick Links -->
+                <nav aria-label="Quick links" class="space-y-3">
+                    <h3 class="text-lg font-semibold text-white">Quick links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-white">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Contact Us -->
+                <address class="not-italic space-y-3" aria-label="Contact information">
+                    <h3 class="text-lg font-semibold text-white">Contact us</h3>
+
+                    <p class="flex items-start text-gray-300">
+                        <!-- email icon -->
+                        <img src="https://img.icons8.com/ios-filled/24/FFFFFF/new-post.png" alt="mail">
+                        <a class="hover:text-white ml-2" href="mailto:info@hada-investment.co.tz">info@hada-investment.co.tz</a>
+                    </p>
+
+                    <p class="flex items-start text-gray-300">
+                        <!-- phone icon -->
+                        <img src="https://img.icons8.com/ios-filled/24/FFFFFF/phone.png" alt="phone">
+                        <a class="hover:text-white ml-2" href="tel:+255715558888">+255 715 558 888</a>
+                    </p>
+
+                    <p class="flex items-start text-gray-300">
+                        <!-- location icon -->
+                        <img src="https://img.icons8.com/ios-filled/24/FFFFFF/marker.png" alt="location">
+                        <span class="ml-2" >Dar es Salaam, Tanzania</span>
+                    </p>
+                </address>
+
+                <!-- Information -->
+                <div aria-label="Company information" class="space-y-3">
+                    <h3 class="text-lg font-semibold text-white">Information</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="about.html#why-choose-us" class="hover:text-white">Why choose us</a></li>
+                        <li><a href="about.html#how-we-operate" class="hover:text-white">How we operate</a></li>
+                        <li><a href="about.html#partners" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Language & Social (stack on mobile) -->
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Language</h3>
+                        <div class="mt-2 flex items-center space-x-3">
+                            <a href="?lang=en" class="px-3 py-1  hover:bg-gray-700 rounded text-sm text-gray-200" aria-pressed="true">English</a>
+                            <a href="?lang=sw" class="px-3 py-1 bg-transparent hover:bg-gray-800 rounded text-sm text-gray-200">Swahili</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Follow us</h3>
+                        <div class="mt-3 flex items-center space-x-4">
+                            <!-- Facebook -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/facebook-new.png" alt="Facebook">
+                            </a>
+
+                            <!-- Twitter / X -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png" alt="Twitter">   
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                               <img src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png" alt="LinkedIn">
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom small print -->
+            <div class="mt-10 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-sm text-gray-400">&copy; <span id="year"></span> HADA Investment Company Limited. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 text-sm text-gray-400">
+                    <a href="privacy.html" class="hover:text-white mr-4">Privacy</a>
+                    <a href="terms.html" class="hover:text-white">Terms</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // set year
+            (function(){ const y = new Date().getFullYear(); const el = document.getElementById('year'); if(el) el.textContent = y; })();
+        </script>
+    </footer></svg>
+</div>
+<div>
+    <div class="py-4">
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const el = document.querySelector('[aria-label="site-credit"]');
+        if (el && !el.textContent.includes('™')) el.textContent = el.textContent.trim() + '™';
+    });
+    </script>
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="https://dops.co.tz/">
+                <p class="text-sm text-gray-400" aria-label="site-credit">Made by Dops Technology</p>
+            </a> 
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
