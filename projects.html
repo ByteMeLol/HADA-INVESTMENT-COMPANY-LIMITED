@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<title>Projects — HADA Investment</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/jpeg" href="assets/logo/favicon.png" />
@@ -136,9 +137,207 @@
 	</nav>
 
 	<main class="pt-16 p-10">
-		<h2 class="text-2xl font-bold">Projects</h2>
-		<p class="mt-4 text-gray-700">Selected projects and case studies go here.</p>
+		<!-- Projects photo gallery / slow-motion carousel -->
+		<section class=" mt-10" data-aos="fade-up">
+			<h2 class="text-3xl md:text-5xl md:font-extrabold text-[#0A2342] mb-6">Our Projects</h2>
+
+			<div id="project-carousel" class="relative overflow-hidden rounded-lg " aria-roledescription="carousel">
+				<!-- Slides -->
+				<div class="relative carousel-viewport">
+					<!-- Slide template (repeat/change src/alt/title/desc as needed) -->
+					<div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-linear opacity-0 pointer-events-none" data-index="0" aria-hidden="true">
+						<img src="assets/projects/proj1.jpg" alt="River bridge construction - Project One" class="w-full h-full object-cover" loading="lazy" decoding="async">
+						<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+							<!-- <h3 class="text-xl font-semibold text-white">Project One</h3> -->
+							<p class="text-sm text-gray-200/90 mt-1 transform translate-y-2 transition-transform duration-700">A short, elegant explanation of the work done on Project One — delivered with care and precision.</p>
+						</div>
+					</div>
+
+					<div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-linear opacity-0 pointer-events-none" data-index="1" aria-hidden="true">
+						<img src="assets/projects/proj2.jpg" alt="Road rehabilitation and surfacing - Project Two" class="w-full h-full object-cover" loading="lazy" decoding="async">
+						<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+							<!-- <h3 class="text-xl font-semibold text-white">Project Two</h3> -->
+							<p class="text-sm text-gray-200/90 mt-1 transform translate-y-2 transition-transform duration-700">Renovation and value-creation details presented simply and beautifully.</p>
+						</div>
+					</div>
+
+					<div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-linear opacity-0 pointer-events-none" data-index="2" aria-hidden="true">
+						<img src="assets/projects/proj3.jpg" alt="Residential development and utilities - Project Three" class="w-full h-full object-cover" loading="lazy" decoding="async">
+						<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+								<!-- <h3 class="text-xl font-semibold text-white">Project Three</h3> -->
+							<p class="text-sm text-gray-200/90 mt-1 transform translate-y-2 transition-transform duration-700">Sustainable approach and bright outcomes captured in imagery and words.</p>
+						</div>
+					</div>
+					<!-- /Slide template -->
+				</div>
+
+				<!-- Prev / Next controls -->
+				<button id="carousel-prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none" aria-label="Previous slide">
+					<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+				</button>
+				<button id="carousel-next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none" aria-label="Next slide">
+					<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+				</button>
+
+				<!-- Indicators -->
+				<div class="absolute left-1/2 -translate-x-1/2 bottom-4 flex space-x-2">
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-white/60" aria-label="Go to slide 1" data-index="0" aria-current="true"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-white/40" aria-label="Go to slide 2" data-index="1" aria-current="false"></button>
+					<button class="carousel-indicator w-3 h-3 rounded-full bg-white/40" aria-label="Go to slide 3" data-index="2" aria-current="false"></button>
+				</div>
+			</div>
+		</section>
+
+			<script src="assets/js/carousel.js"></script>
 	</main>
+
+	<!-- CTA -->
+	<section class="bg-[#0A2342] text-white py-12" data-aos="fade-up">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-2xl md:text-4xl font-extrabold mb-4">Want a project like this?</h2>
+			<p class="mb-6 text-gray-200 max-w-2xl mx-auto">Contact our team for a free consultation and a tailored proposal for your next infrastructure or construction project.</p>
+			<a href="contact.html" class="inline-block bg-amber-400 hover:bg-amber-500 text-[#0A2342] font-semibold px-6 py-3  ">Get a Quote</a>
+		</div>
+	</section>
+
+	<!-- Projects grid -->
+	<!-- <section class="py-12 bg-gray-50" data-aos="fade-up">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h3 class="text-2xl md:text-3xl font-extrabold text-[#0A2342] mb-6">More Projects</h3>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+					<img src="assets/projects/proj1-thumb.jpg" alt="River bridge construction - thumbnail" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+					<div class="p-4">
+						<h4 class="font-semibold text-lg text-gray-900">River Bridge Rehabilitation</h4>
+						<p class="text-sm text-gray-600 mt-2">Comprehensive replacement of worn spans and approach works.</p>
+						<div class="mt-4">
+							<a href="#" class="text-amber-500 hover:underline">Read case study</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+					<img src="assets/projects/proj2-thumb.jpg" alt="Road surfacing project - thumbnail" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+					<div class="p-4">
+						<h4 class="font-semibold text-lg text-gray-900">Road Rehabilitation</h4>
+						<p class="text-sm text-gray-600 mt-2">Pavement strengthening and surface works across regional routes.</p>
+						<div class="mt-4">
+							<a href="#" class="text-amber-500 hover:underline">Read case study</a>
+						</div>
+					</div>
+				</article>
+
+				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+					<img src="assets/projects/proj3-thumb.jpg" alt="Residential development - thumbnail" class="w-full h-48 object-cover" loading="lazy" decoding="async">
+					<div class="p-4">
+						<h4 class="font-semibold text-lg text-gray-900">Residential & Utilities</h4>
+						<p class="text-sm text-gray-600 mt-2">Multi-unit residential development with site services and utilities.</p>
+						<div class="mt-4">
+							<a href="#" class="text-amber-500 hover:underline">Read case study</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section> -->
+
+	<!-- Footer (copied from index.html for consistency) -->
+	<footer class="bg-[#0A2342] text-gray-100 mt-12" role="contentinfo" aria-labelledby="footer-heading">
+		<h2 id="footer-heading" class="sr-only">Footer</h2>
+
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+				<!-- Quick Links -->
+				<nav aria-label="Quick links" class="space-y-3">
+					<h3 class="text-lg font-semibold text-white">Quick links</h3>
+					<ul class="space-y-2">
+						<li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+						<li><a href="about.html" class="text-gray-300 hover:text-white">About</a></li>
+						<li><a href="services.html" class="text-gray-300 hover:text-white">Services</a></li>
+						<li><a href="projects.html" class="text-gray-300 hover:text-white">Projects</a></li>
+						<li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+					</ul>
+				</nav>
+
+				<!-- Contact Us -->
+				<address class="not-italic space-y-3" aria-label="Contact information">
+					<h3 class="text-lg font-semibold text-white">Contact us</h3>
+
+					<p class="flex items-start text-gray-300">
+						<img src="https://img.icons8.com/ios-filled/24/FFFFFF/new-post.png" alt="mail">
+						<a class="hover:text-white ml-2" href="mailto:info@hada-investment.co.tz">info@hada-investment.co.tz</a>
+					</p>
+
+					<p class="flex items-start text-gray-300">
+						<img src="https://img.icons8.com/ios-filled/24/FFFFFF/phone.png" alt="phone">
+						<a class="hover:text-white ml-2" href="tel:+255715558888">+255 715 558 888</a>
+					</p>
+
+					<p class="flex items-start text-gray-300">
+						<img src="https://img.icons8.com/ios-filled/24/FFFFFF/marker.png" alt="location">
+						<span class="ml-2">Dar es Salaam, Tanzania</span>
+					</p>
+				</address>
+
+				<!-- Information -->
+				<div aria-label="Company information" class="space-y-3">
+					<h3 class="text-lg font-semibold text-white">Information</h3>
+					<ul class="space-y-2 text-gray-300">
+						<li><a href="about.html#why-choose-us" class="hover:text-white">Why choose us</a></li>
+						<li><a href="about.html#how-we-operate" class="hover:text-white">How we operate</a></li>
+						<li><a href="about.html#partners" class="hover:text-white">Partners</a></li>
+					</ul>
+				</div>
+
+				<!-- Language & Social (stack on mobile) -->
+				<div class="space-y-4">
+					<div>
+						<h3 class="text-lg font-semibold text-white">Language</h3>
+						<div class="mt-2 flex items-center space-x-3">
+							<a href="?lang=en" class="px-3 py-1  hover:bg-gray-700 rounded text-sm text-gray-200" aria-pressed="true">English</a>
+							<a href="?lang=sw" class="px-3 py-1 bg-transparent hover:bg-gray-800 rounded text-sm text-gray-200">Swahili</a>
+						</div>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-white">Follow us</h3>
+						<div class="mt-3 flex items-center space-x-4">
+							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/facebook-new.png" alt="Facebook">
+							</a>
+
+							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png" alt="Twitter">   
+							</a>
+
+							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png" alt="LinkedIn">
+							</a>
+
+							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png" alt="Instagram">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bottom small print -->
+			<div class="mt-10 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between">
+				<p class="text-sm text-gray-400">&copy; <span id="year"></span> HADA Investment Company Limited. All rights reserved.</p>
+				<div class="mt-4 md:mt-0 text-sm text-gray-400">
+					<a href="privacy.html" class="hover:text-white mr-4">Privacy</a>
+					<a href="terms.html" class="hover:text-white">Terms</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		// set year
+		(function(){ const y = new Date().getFullYear(); const el = document.getElementById('year'); if(el) el.textContent = y; })();
+	</script>
+
 	<script src="assets/js/main.js"></script>
-</body>
-</html>
+	</body>
+	</html>

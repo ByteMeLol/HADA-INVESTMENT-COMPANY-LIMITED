@@ -16,3 +16,20 @@
 .nav-link.active .label,
 .nav-link[aria-current="page"] .label { color: #F5B21B; }
 
+/* Carousel viewport keeps a consistent aspect ratio (16:9) across screen sizes */
+.carousel-viewport {
+	aspect-ratio: 16 / 9;
+	height: auto; /* allow aspect-ratio to control height */
+	position: relative;
+}
+
+/* Carousel slide transitions */
+.carousel-slide {
+	transition: opacity .9s ease, transform .6s ease;
+}
+
+.carousel-slide.opacity-0 { opacity: 0; }
+.carousel-slide.opacity-100 { opacity: 1; }
+.pointer-events-none { pointer-events: none; }
+.pointer-events-auto { pointer-events: auto; }
+
