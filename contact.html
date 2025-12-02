@@ -132,11 +132,312 @@
 			</div>
 		</div>
 	</nav>
+	<section class="relative w-full rounded-bl-3xl min-h-[90vh] m:min-h-[90vh] bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/contact.jpg');" role="region" aria-labelledby="company-heading">
+        <h2 id="company-heading" class="sr-only">HADA INVESTMENT COMPANY LIMITED</h2>
+        <!-- company description moved to About page; kept out of homepage hero -->
+        <div class="absolute inset-0 bg-black/50"></div>
 
-	<main class="pt-16 p-10">
-		<h2 class="text-2xl font-bold">Contact</h2>
-		<p class="mt-4 text-gray-700">Contact information and form go here.</p>
-	</main>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-white text-3xl md:text-6xl lg:text-7xl font-extrabold mb-4">
+                <span id="typewriter" class="" aria-live="polite"></span>
+                <span id="cursor" class="inline-block ml-2 w-1 h-8 bg-white/90"></span>
+            </h1>
+			<p class="mt-3 text-white max-w-2xl mx-auto">We'd love to hear from you — whether it's a project enquiry, partnership proposal, or general question. Reach out and our team will respond as soon as possible.</p>        
+        </div>
+
+        <style>
+            /* smooth cursor blink */
+            @keyframes blink {
+                0%, 49% { opacity: 1; }
+                50%, 100% { opacity: 0; }
+            }
+            #cursor { animation: blink 1s steps(2, start) infinite; }
+        </style>
+
+        <script>
+            (function () {
+                const phrases = [
+                    "GET IN TOUCH WITH US."
+                    
+                ];
+                const el = document.getElementById('typewriter');
+                let phraseIndex = 0;
+                let charIndex = 0;
+                let deleting = false;
+
+                function tick() {
+                    const current = phrases[phraseIndex];
+                    if (!deleting) {
+                        el.textContent = current.slice(0, charIndex + 1);
+                        charIndex++;
+                        if (charIndex === current.length) {
+                            deleting = true;
+                            setTimeout(tick, 3600);
+                            return;
+                        }
+                        setTimeout(tick, 100 + Math.random() * 80);
+                    } else {
+                        el.textContent = current.slice(0, charIndex - 1);
+                        charIndex--;
+                        if (charIndex === 0) {
+                            deleting = false;
+                            phraseIndex = (phraseIndex + 1) % phrases.length;
+                            setTimeout(tick, 500);
+                            return;
+                        }
+                        setTimeout(tick, 40 + Math.random() * 40);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    // start after a short delay so background loads
+                    setTimeout(tick, 600);
+                });
+            })();
+        </script>
+    </section>
+    
+
+	<div class="rounded-lg items-center">
+		<main class="">
+			<section class="bg-white py-16">
+				<div class="max-w-6xl mx-auto px-6">
+					<div class="grid grid-cols-1 md:grid-cols-1 gap-8 items-start">
+						<div class="space-y-6">
+							<div class="p-6 bg-gray-50 contact-card">
+								<h3 class="text-2xl md:text-4xl md:font-extrabold font-semibold text-gray-800">Our Contacts</h3>
+								<p class="mt-2 text-gray-600">Reach us for project enquiries, partnerships or general questions.</p>
+								<div class="mt-4 space-y-3 text-sm text-gray-700">
+									<p class="flex items-center"><img src="https://img.icons8.com/ios-filled/24/0A2342/new-post.png" alt="email" class="mr-2"/><a href="mailto:info@hada-investment.co.tz" class="hover:text-[#F5B21B]">info@hada-investment.co.tz</a></p>
+									<div class="flex flex-col md:flex-row  gap-4">
+										<p class="flex items-center"><img src="https://img.icons8.com/ios-filled/24/0A2342/phone.png" alt="phone" class="mr-2"/><a href="tel:+255715558888" class="hover:text-[#F5B21B]">+255 715 558 888</a></p>
+									    <p class="flex items-center"><a href="tel:+255768733422" class="hover:text-[#F5B21B]">+255 768 733 422</a></p>
+									    <p class="flex items-center"><a href="tel:+255687813613" class="hover:text-[#F5B21B]">+255 687 813 613</a></p>
+									</div>
+									<p class="flex items-center"><img src="https://img.icons8.com/ios-filled/24/0A2342/marker.png" alt="location" class="mr-2"/>Kigamboni, Ward Somangira, Dege Street, Near Dege ECCO Village</p>
+									<p class="flex items-center text-sm text-gray-500">P.O. Box 80448, Dar es Salaam</p>
+								</div>
+								<div class="mt-4">
+									
+									<div class="flex items-center space-x-3">
+										<a href="#" aria-label="Facebook" class="hover:opacity-90 hover:scale-105"><img src="https://img.icons8.com/ios-filled/48/F5B21B/facebook-new.png" alt="Facebook"/></a>
+										<a href="#" aria-label="Twitter" class="hover:opacity-90 hover:scale-105"><img src="https://img.icons8.com/ios-filled/48/F5B21B/twitter.png" alt="Twitter"/></a>
+										<a href="#" aria-label="LinkedIn" class="hover:opacity-90 hover:scale-105"><img src="https://img.icons8.com/ios-filled/48/F5B21B/linkedin.png" alt="LinkedIn"/></a>
+										<a href="#" aria-label="Instagram" class="hover:opacity-90 hover:scale-105"><img src="https://img.icons8.com/ios-filled/48/F5B21B/instagram-new.png" alt="Instagram"/></a>
+									</div>
+								</div>
+							</div>
+
+					  
+				            <div class="p-6 bg-gray-50">
+								<h3 class="text-xl font-semibold text-gray-800">Visit Us</h3>
+								<p class="mt-2 text-gray-600">Find us on Google Maps or request a site visit. Click the map to open directions.</p>
+								<div class="mt-4">
+									<iframe title="HADA Investment location" src="https://www.google.com/maps?q=HADA+Investment+Dar+es+Salaam&output=embed" class="w-full rounded-md shadow-sm h-64 border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									<p class="mt-2 text-sm"><a href="https://www.google.com/maps/search/?api=1&query=HADA+Investment+Dar+es+Salaam" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-[#F5B21B]">Open in Google Maps</a></p>
+									<p class="mt-2 text-xs text-gray-500">Privacy: this map is embedded from Google Maps. Loading the map may send data to Google. If you prefer, you can open the map link instead of loading the embed.</p>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="grid md:grid-cols-2 md:max-w-4xl gap-8 items-start">
+							<!-- Left: form styled like reference -->
+							<div>
+								<form id="contact-form" class="bg-transparent p-0" aria-label="Contact form" novalidate>
+									<div class="mb-6">
+										<h3 class="text-xl font-bold text-gray-900">Interested to know more?</h3>
+										<p class="text-lg text-gray-600 mt-1">Let us start a conversion</p>
+									</div>
+
+									<div class="space-y-4">
+										<label class="block relative">
+											<img src="https://img.icons8.com/ios-filled/20/0A2342/user-male-circle.png" alt="user" class="absolute left-4 top-1/2 -translate-y-1/2" />
+											<input required name="name" id="cf-name" placeholder="Buckets Tanzania"
+												class="w-full rounded-lg border border-[#0A2342]  text-[#0A2342] placeholder-[#0A2342] px-12 py-4 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition" />
+										</label>
+
+										<label class="block relative">
+											<img src="https://img.icons8.com/ios-filled/20/0A2342/new-post.png" alt="email" class="absolute left-4 top-1/2 -translate-y-1/2" />
+											<input required type="email" name="email" id="cf-email" placeholder="name@yourdomain.com"
+												class="w-full rounded-lg border border-[#0A2342] text-[#0A2342] placeholder-[#0A2342] px-12 py-4 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition" />
+										</label>
+
+										<label class="block relative">
+											<textarea required name="message" id="cf-message" rows="5" placeholder="Leave a comment..."
+												class="w-full rounded-lg border border-[#0A2342]  text-[#0A2342] placeholder-[#0A2342] px-4 py-4 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0A2342] focus:border-[#0A2342] transition resize-vertical min-h-[120px]"></textarea>
+										</label>
+
+										<div>
+											<button type="submit" class="w-full bg-[#0A2342] hover:bg-[#0A2342] text-white py-4 rounded-xl text-lg font-medium shadow">Submit</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<!-- Right: large headline and illustration -->
+							<div class=" flex items-center justify-center text-center md:text-left">
+								<div class="mr-6 text-center md:text-left items-center justify-center">
+									<h2 class="text-6xl md:text-8xl font-extrabold leading-tight text-[#F5B21B]">Don't <span class="text-[#0A2342]">Hesitate</span></h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const form = document.getElementById('contact-form');
+					form.addEventListener('submit', function (e) {
+						e.preventDefault();
+						const name = document.getElementById('cf-name').value.trim();
+						const email = document.getElementById('cf-email').value.trim();
+						const subjectEl = document.getElementById('cf-subject');
+						const subject = subjectEl ? (subjectEl.value || 'Enquiry from website').trim() : 'Enquiry from website';
+						const message = document.getElementById('cf-message').value.trim();
+
+						if (!name || !email || !message) {
+							alert('Please fill name, email and message.');
+							return;
+						}
+
+						const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+						const mailto = `mailto:info@hada-investment.co.tz?subject=${encodeURIComponent(subject)}&body=${body}`;
+						window.location.href = mailto;
+					});
+				});
+			</script>
+		</main>
+	</div>
+	<div>
+    <footer class="bg-[#0A2342] text-gray-100 mt-12" role="contentinfo" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Quick Links -->
+                <nav aria-label="Quick links" class="space-y-3">
+                    <h3 class="text-lg font-semibold text-white">Quick links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-white">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Contact Us -->
+                <address class="not-italic space-y-3" aria-label="Contact information">
+                    <h3 class="text-lg font-semibold text-white">Contact us</h3>
+
+                    <p class="flex items-start text-gray-300">
+                        <!-- email icon -->
+                        <img src="https://img.icons8.com/ios-filled/24/FFFFFF/new-post.png" alt="mail">
+                        <a class="hover:text-white ml-2" href="mailto:info@hada-investment.co.tz">info@hada-investment.co.tz</a>
+                    </p>
+
+					<p class="flex flex-col text-gray-300">
+						<span class="flex items-start">
+							<img src="https://img.icons8.com/ios-filled/24/FFFFFF/phone.png" alt="phone">
+							<a class="hover:text-white ml-2" href="tel:+255715558888">+255 715 558 888</a>
+						</span>
+						<!-- <span class="flex items-start mt-1">
+							<img src="https://img.icons8.com/ios-filled/24/FFFFFF/phone.png" alt="phone">
+							<a class="hover:text-white ml-2" href="tel:+255768733422">+255 768 733 422</a>
+						</span>
+						<span class="flex items-start mt-1">
+							<img src="https://img.icons8.com/ios-filled/24/FFFFFF/phone.png" alt="phone">
+							<a class="hover:text-white ml-2" href="tel:+255687813613">+255 687 813 613</a>
+						</span> -->
+					</p>
+
+                    <p class="flex items-start text-gray-300">
+                        <!-- location icon -->
+                        <img src="https://img.icons8.com/ios-filled/24/FFFFFF/marker.png" alt="location">
+                        <span class="ml-2" >Dar es Salaam, Tanzania</span>
+                    </p>
+                </address>
+
+                <!-- Information -->
+                <div aria-label="Company information" class="space-y-3">
+                    <h3 class="text-lg font-semibold text-white">Information</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="about.html#why-choose-us" class="hover:text-white">Why choose us</a></li>
+                        <li><a href="about.html#how-we-operate" class="hover:text-white">How we operate</a></li>
+                        <li><a href="about.html#partners" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Language & Social (stack on mobile) -->
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Language</h3>
+                        <div class="mt-2 flex items-center space-x-3">
+                            <a href="?lang=en" class="px-3 py-1  hover:bg-gray-700 rounded text-sm text-gray-200" aria-pressed="true">English</a>
+                            <a href="?lang=sw" class="px-3 py-1 bg-transparent hover:bg-gray-800 rounded text-sm text-gray-200">Swahili</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-white">Follow us</h3>
+                        <div class="mt-3 flex items-center space-x-4">
+                            <!-- Facebook -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/facebook-new.png" alt="Facebook">
+                            </a>
+
+                            <!-- Twitter / X -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png" alt="Twitter">   
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                               <img src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png" alt="LinkedIn">
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-z-2" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom small print -->
+            <div class="mt-10 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-sm text-gray-400">&copy; <span id="year"></span> HADA Investment Company Limited. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 text-sm text-gray-400">
+                    <a href="privacy.html" class="hover:text-white mr-4">Privacy</a>
+                    <a href="terms.html" class="hover:text-white">Terms</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // set year
+            (function(){ const y = new Date().getFullYear(); const el = document.getElementById('year'); if(el) el.textContent = y; })();
+        </script>
+    </footer></svg>
+    </div>
+	<div>
+		<div class="py-4">
+		<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const el = document.querySelector('[aria-label="site-credit"]');
+			if (el && !el.textContent.includes('™')) el.textContent = el.textContent.trim() + '™';
+		});
+		</script>
+			<div class="max-w-7xl mx-auto px-4 text-center">
+				<a href="https://dops.co.tz/">
+					<p class="text-sm text-gray-400" aria-label="site-credit">Made by Dops Technology</p>
+				</a> 
+			</div>
+		</div>
+	</div>
 	<script src="assets/js/main.js"></script>
 </body>
 </html>
