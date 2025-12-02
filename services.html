@@ -8,6 +8,8 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="icon" type="image/jpeg" href="assets/logo/favicon.png" />
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
@@ -142,7 +144,7 @@
 		<section id="service-details" class="py-12 bg-white text-justify">
 			<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 				<!-- Education details -->
-				<article id="education">
+				<article data-aos="fade-up" id="education">
 					<h3 class="text-2xl font-bold text-gray-900">Education — What we deliver</h3>
 					<p class="mt-3 text-gray-700">Our education projects go beyond buildings. We deliver safe, durable and flexible learning environments that support modern pedagogy and community use.</p>
 					<ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
@@ -154,7 +156,7 @@
 				</article>
 
 				<!-- Health details -->
-				<article id="health">
+				<article data-aos="fade-up" id="health">
 					<h3 class="text-2xl font-bold text-gray-900">Health — Clinical & compliant delivery</h3>
 					<p class="mt-3 text-gray-700">Healthcare projects require strict infection control, correct zoning and reliable services. We manage construction so facilities are safe, efficient and maintainable.</p>
 					<ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
@@ -166,7 +168,7 @@
 				</article>
 
 				<!-- Residence details -->
-				<article id="residence">
+				<article data-aos="fade-up" id="residence">
 					<h3 class="text-2xl font-bold text-gray-900">Residence — Homes and hospitality</h3>
 					<p class="mt-3 text-gray-700">Residential and hospitality projects focus on user experience, longevity and buildability — from efficient apartment layouts to high-quality finishes for hotels.</p>
 					<ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
@@ -178,7 +180,7 @@
 				</article>
 
 				<!-- Commercial details -->
-				<article id="commercial">
+				<article data-aos="fade-up" id="commercial">
 					<h3 class="text-2xl font-bold text-gray-900">Commercial — Retail & event spaces</h3>
 					<p class="mt-3 text-gray-700">Commercial projects demand careful coordination of services, circulation and life-safety systems to ensure efficient operations and pleasant customer experiences.</p>
 					<ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
@@ -189,7 +191,7 @@
 				</article>
 
 				<!-- Transport details -->
-				<article id="transport">
+				<article data-aos="fade-up" id="transport">
 					<h3 class="text-2xl font-bold text-gray-900">Transport — Roads, bridges, access works</h3>
 					<p class="mt-3 text-gray-700">We deliver transport infrastructure from earthworks and drainage to pavement construction and structural bridges, focusing on durability and maintainability.</p>
 					<ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
@@ -200,7 +202,7 @@
 				</article>
 
 				<!-- Industrial details -->
-				<article id="industrial">
+				<article data-aos="fade-up" id="industrial">
 					<h3 class="text-2xl font-bold text-gray-900">Industrial — Workshops, warehouses & fabrication</h3>
 					<p class="mt-3 text-gray-700">Industrial facilities require robust structural design, efficient layouts for workflows and reliable services for heavy-duty operations.</p>
 					<ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
@@ -333,5 +335,13 @@
 		</div>
 	</div>
 	<script src="assets/js/main.js"></script>
+	<script>
+    // Initialize AOS after DOM is ready so elements are present
+    document.addEventListener('DOMContentLoaded', function () {
+        if (window.AOS) {
+            AOS.init({ once: true, duration: 700, easing: 'ease-out-cubic' });
+        }
+    });
+</script>
 </body>
 </html>
