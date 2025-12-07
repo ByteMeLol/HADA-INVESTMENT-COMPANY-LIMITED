@@ -136,112 +136,219 @@
 		</div>
 	</nav>
 
-	<main class="pt-16 p-10">
-		<!-- Projects photo gallery / slow-motion carousel -->
-		<section class=" mt-10" data-aos="fade-up">
-			<h2 class="text-3xl md:text-5xl md:font-extrabold text-[#0A2342] mb-6">Our Projects</h2>
-
-			<div id="project-carousel" class="relative overflow-hidden rounded-lg " aria-roledescription="carousel">
-				<!-- Slides -->
-				<div class="relative carousel-viewport">
-					<!-- Slide template (repeat/change src/alt/title/desc as needed) -->
-					<div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-linear opacity-0 pointer-events-none" data-index="0" aria-hidden="true">
-						<img src="assets/projects/proj1.jpg" alt="River bridge construction - Project One" class="w-full h-full object-cover" loading="lazy" decoding="async">
-						<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-							<!-- <h3 class="text-xl font-semibold text-white">Project One</h3> -->
-							<p class="text-sm text-gray-200/90 mt-1 transform translate-y-2 transition-transform duration-700">A short, elegant explanation of the work done on Project One — delivered with care and precision.</p>
-						</div>
-					</div>
-
-					<div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-linear opacity-0 pointer-events-none" data-index="1" aria-hidden="true">
-						<img src="assets/projects/proj2.jpg" alt="Road rehabilitation and surfacing - Project Two" class="w-full h-full object-cover" loading="lazy" decoding="async">
-						<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-							<!-- <h3 class="text-xl font-semibold text-white">Project Two</h3> -->
-							<p class="text-sm text-gray-200/90 mt-1 transform translate-y-2 transition-transform duration-700">Renovation and value-creation details presented simply and beautifully.</p>
-						</div>
-					</div>
-
-					<div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-linear opacity-0 pointer-events-none" data-index="2" aria-hidden="true">
-						<img src="assets/projects/proj3.jpg" alt="Residential development and utilities - Project Three" class="w-full h-full object-cover" loading="lazy" decoding="async">
-						<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-								<!-- <h3 class="text-xl font-semibold text-white">Project Three</h3> -->
-							<p class="text-sm text-gray-200/90 mt-1 transform translate-y-2 transition-transform duration-700">Sustainable approach and bright outcomes captured in imagery and words.</p>
-						</div>
-					</div>
-					<!-- /Slide template -->
+	<main class="">
+		<!-- Hero Section -->
+		<section class="bg-gradient-to-br from-[#0A2342] via-[#0d2e52] to-[#0A2342] text-white py-16 md:py-24" data-aos="fade-up">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+						Our Portfolio of <span class="text-[#F5B21B]">Excellence</span>
+					</h1>
+					<p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-light">
+						Transforming visions into reality across education, healthcare, residential, commercial, transport, and industrial sectors. Each project reflects our commitment to quality, sustainability, and client satisfaction.
+					</p>
 				</div>
 
-				<!-- Prev / Next controls -->
-				<button id="carousel-prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none" aria-label="Previous slide">
-					<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-				</button>
-				<button id="carousel-next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full focus:outline-none" aria-label="Next slide">
-					<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-				</button>
-
-				<!-- Indicators -->
-				<div class="absolute left-1/2 -translate-x-1/2 bottom-4 flex space-x-2">
-					<button class="carousel-indicator w-3 h-3 rounded-full bg-white/60" aria-label="Go to slide 1" data-index="0" aria-current="true"></button>
-					<button class="carousel-indicator w-3 h-3 rounded-full bg-white/40" aria-label="Go to slide 2" data-index="1" aria-current="false"></button>
-					<button class="carousel-indicator w-3 h-3 rounded-full bg-white/40" aria-label="Go to slide 3" data-index="2" aria-current="false"></button>
+				<!-- Filter Buttons -->
+				<div class="flex flex-wrap justify-center gap-3 mb-8">
+					<button class="filter-btn active px-6 py-2 border-b-2 border-[#F5B21B] text-[#F5B21B] font-semibold transition-colors hover:text-white" data-filter="all">All Projects</button>
+					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="education">Education</button>
+					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="health">Healthcare</button>
+					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="residential">Residential</button>
+					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="transport">Transport</button>
+					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="industrial">Industrial</button>
 				</div>
 			</div>
 		</section>
 
-			<script src="assets/js/carousel.js"></script>
-	</main>
-
-	<!-- CTA -->
-	<section class="bg-[#0A2342] text-white py-12" data-aos="fade-up">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<h2 class="text-2xl md:text-4xl font-extrabold mb-4">Want a project like this?</h2>
-			<p class="mb-6 text-gray-200 max-w-2xl mx-auto">Contact our team for a free consultation and a tailored proposal for your next infrastructure or construction project.</p>
-			<a href="contact.html" class="inline-block bg-amber-400 hover:bg-amber-500 text-[#0A2342] font-semibold px-6 py-3  ">Get a Quote</a>
-		</div>
-	</section>
-
-	<!-- Projects grid -->
-	<!-- <section class="py-12 bg-gray-50" data-aos="fade-up">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h3 class="text-2xl md:text-3xl font-extrabold text-[#0A2342] mb-6">More Projects</h3>
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
-					<img src="assets/projects/proj1-thumb.jpg" alt="River bridge construction - thumbnail" class="w-full h-48 object-cover" loading="lazy" decoding="async">
-					<div class="p-4">
-						<h4 class="font-semibold text-lg text-gray-900">River Bridge Rehabilitation</h4>
-						<p class="text-sm text-gray-600 mt-2">Comprehensive replacement of worn spans and approach works.</p>
-						<div class="mt-4">
-							<a href="#" class="text-amber-500 hover:underline">Read case study</a>
+		<!-- Projects Grid Section -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+					<!-- Project Card 1 -->
+					<div class="project-card group" data-category="transport" data-aos="fade-up">
+						<div class="relative overflow-hidden bg-gradient-to-br  rounded-lg aspect-video mb-6">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<img src="assets/projects/road.jpg" alt="">
+							</div>
+							<div class="absolute top-4 right-4 bg-[#F5B21B] text-[#0A2342] px-3 py-1 rounded-full text-xs font-bold">ROAD</div>
+						</div>
+						<h3 class="text-xl font-bold text-[#0A2342] mb-3 group-hover:text-[#F5B21B] transition-colors">Maintanance work along Dodoma,Kintiku</h3>
+						<!-- <p class="text-gray-600 text-sm mb-4 leading-relaxed">.</p> -->
+						<div class="flex gap-2 mb-5">
+							<!-- <span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Design</span> -->
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Repair</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">21/11/2025</span>
+						</div>
+						<div class="pt-4 border-t border-gray-200">
+							<!-- <p class="text-xs text-gray-500 mb-3">Project scope • Budget: $2.5M • Timeline: 18 months</p> -->
+							<a href="#" class="inline-flex items-center text-[#F5B21B] font-semibold text-sm hover:gap-2 transition-all gap-1">
+								View Details
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12h14M12 5l7 7-7 7"></path>
+								</svg>
+							</a>
 						</div>
 					</div>
-				</article>
 
-				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
-					<img src="assets/projects/proj2-thumb.jpg" alt="Road surfacing project - thumbnail" class="w-full h-48 object-cover" loading="lazy" decoding="async">
-					<div class="p-4">
-						<h4 class="font-semibold text-lg text-gray-900">Road Rehabilitation</h4>
-						<p class="text-sm text-gray-600 mt-2">Pavement strengthening and surface works across regional routes.</p>
-						<div class="mt-4">
-							<a href="#" class="text-amber-500 hover:underline">Read case study</a>
+					<!-- Project Card 2 -->
+					<div class="project-card group" data-category="transport" data-aos="fade-up" data-aos-delay="100">
+						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<img src="assets/projects/top.jpeg" alt="">
+							</div>
+							<div class="absolute top-4 right-4 bg-[#F5B21B] text-[#0A2342] px-3 py-1 rounded-full text-xs font-bold">BRIDGE</div>
+						</div>
+						<h3 class="text-xl font-bold text-[#0A2342] mb-3 group-hover:text-[#F5B21B] transition-colors">Bridge Construction</h3>
+						<!-- <p class="text-gray-600 text-sm mb-4 leading-relaxed">ISO-certified healthcare facility with 200 beds, modern ICU units, surgical theaters, and integrated diagnostic laboratories meeting international standards.</p> -->
+						<div class="flex gap-2 mb-5">
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Bridges</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Construction</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">2025</span>
+						</div>
+						<div class="pt-4 border-t border-gray-200">
+							<!-- <p class="text-xs text-gray-500 mb-3">Project scope • Budget: $8.5M • Timeline: 24 months</p> -->
+							<a href="#" class="inline-flex items-center text-[#F5B21B] font-semibold text-sm hover:gap-2 transition-all gap-1">
+								View Details
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12h14M12 5l7 7-7 7"></path>
+								</svg>
+							</a>
 						</div>
 					</div>
-				</article>
 
-				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
-					<img src="assets/projects/proj3-thumb.jpg" alt="Residential development - thumbnail" class="w-full h-48 object-cover" loading="lazy" decoding="async">
-					<div class="p-4">
-						<h4 class="font-semibold text-lg text-gray-900">Residential & Utilities</h4>
-						<p class="text-sm text-gray-600 mt-2">Multi-unit residential development with site services and utilities.</p>
-						<div class="mt-4">
-							<a href="#" class="text-amber-500 hover:underline">Read case study</a>
+					<!-- Project Card 3 -->
+					<div class="project-card group" data-category="transport" data-aos="fade-up" data-aos-delay="200">
+						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<img src="assets/projects/roadhea.jpg" alt="">
+							</div>
+							<div class="absolute top-4 right-4 bg-[#F5B21B] text-[#0A2342] px-3 py-1 rounded-full text-xs font-bold">ROAD</div>
+						</div>
+						<h3 class="text-xl font-bold text-[#0A2342] mb-3 group-hover:text-[#F5B21B] transition-colors">Road Repairing and Maintenance</h3>
+						<!-- <p class="text-gray-600 text-sm mb-4 leading-relaxed">Premium residential development with 156 units, modern amenities, green spaces, and smart home technology integration for contemporary living.</p> -->
+						<div class="flex gap-2 mb-5">
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Maintenance</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Repair</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">2025</span>
+						</div>
+						<div class="pt-4 border-t border-gray-200">
+							<!-- <p class="text-xs text-gray-500 mb-3">Project scope • Budget: $4.2M • Timeline: 20 months</p> -->
+							<a href="#" class="inline-flex items-center text-[#F5B21B] font-semibold text-sm hover:gap-2 transition-all gap-1">
+								View Details
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12h14M12 5l7 7-7 7"></path>
+								</svg>
+							</a>
 						</div>
 					</div>
-				</article>
+
+					<!-- Project Card 4 -->
+					<div class="project-card group" data-category="transport" data-aos="fade-up" data-aos-delay="300">
+						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<img src="assets/projects/side3.jpg" alt="">
+							</div>
+							<div class="absolute top-4 right-4 bg-[#F5B21B] text-[#0A2342] px-3 py-1 rounded-full text-xs font-bold">ROAD</div>
+						</div>
+						<h3 class="text-xl font-bold text-[#0A2342] mb-3 group-hover:text-[#F5B21B] transition-colors">Road Infrastructure </h3>
+						<!-- <p class="text-gray-600 text-sm mb-4 leading-relaxed">Modern market infrastructure with 240 vendor stalls, climate-controlled environments, food courts, and optimal pedestrian circulation design.</p> -->
+						<div class="flex gap-2 mb-5">
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Construction</span>
+							<!-- <span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full"></span> -->
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">2025</span>
+						</div>
+						<div class="pt-4 border-t border-gray-200">
+							<!-- <p class="text-xs text-gray-500 mb-3">Project scope • Budget: $3.8M • Timeline: 16 months</p> -->
+							<a href="#" class="inline-flex items-center text-[#F5B21B] font-semibold text-sm hover:gap-2 transition-all gap-1">
+								View Details
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12h14M12 5l7 7-7 7"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Project Card 5 -->
+					<!-- <div class="project-card group" data-category="industrial" data-aos="fade-up" data-aos-delay="400">
+						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#F5B21B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3">
+									<path d="M4 6h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"></path>
+									<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+									<path d="M9 11v2M15 11v2"></path>
+								</svg>
+							</div>
+							<div class="absolute top-4 right-4 bg-[#F5B21B] text-[#0A2342] px-3 py-1 rounded-full text-xs font-bold">INDUSTRIAL</div>
+						</div>
+						<h3 class="text-xl font-bold text-[#0A2342] mb-3 group-hover:text-[#F5B21B] transition-colors">Advanced Manufacturing Facility</h3>
+						<p class="text-gray-600 text-sm mb-4 leading-relaxed">High-capacity industrial complex with crane-supported frameworks, heavy-duty flooring, and integrated utility systems for precision manufacturing operations.</p>
+						<div class="flex gap-2 mb-5">
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Industrial</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Structural Steel</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">2024</span>
+						</div>
+						<div class="pt-4 border-t border-gray-200">
+							<p class="text-xs text-gray-500 mb-3">Project scope • Budget: $6.2M • Timeline: 22 months</p>
+							<a href="#" class="inline-flex items-center text-[#F5B21B] font-semibold text-sm hover:gap-2 transition-all gap-1">
+								View Details
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12h14M12 5l7 7-7 7"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					 Project Card 6 -->
+					<!-- <div class="project-card group" data-category="education" data-aos="fade-up" data-aos-delay="500">
+						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#F5B21B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3">
+									<path d="M22 10v6m0 0a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"></path>
+									<path d="M12 6v6l4 2"></path>
+								</svg>
+							</div>
+							<div class="absolute top-4 right-4 bg-[#F5B21B] text-[#0A2342] px-3 py-1 rounded-full text-xs font-bold">EDUCATION</div>
+						</div>
+						<h3 class="text-xl font-bold text-[#0A2342] mb-3 group-hover:text-[#F5B21B] transition-colors">Technical Skills Training Center</h3>
+						<p class="text-gray-600 text-sm mb-4 leading-relaxed">Specialized vocational training facility with 8 workshop modules, practical labs, demonstration spaces, and residential accommodation for students.</p>
+						<div class="flex gap-2 mb-5">
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Education</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">Practical Labs</span>
+							<span class="inline-block bg-[#F0F4F8] text-[#0A2342] px-3 py-1 text-xs font-semibold rounded-full">2023-2024</span>
+						</div>
+						<div class="pt-4 border-t border-gray-200">
+							<p class="text-xs text-gray-500 mb-3">Project scope • Budget: $3.1M • Timeline: 18 months</p>
+							<a href="#" class="inline-flex items-center text-[#F5B21B] font-semibold text-sm hover:gap-2 transition-all gap-1">
+								View Details
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12h14M12 5l7 7-7 7"></path>
+								</svg>
+							</a>
+						</div>
+					</div>  -->
+				</div>
 			</div>
-		</div>
-	</section> -->
+		</section>
 
-	<!-- Footer (copied from index.html for consistency) -->
+		<!-- CTA Section -->
+		<section class="bg-[#0A2342] text-white py-16 md:py-20" data-aos="fade-up">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Next Project?</h2>
+				<p class="text-gray-300 text-lg mb-8 leading-relaxed">Let our team of experienced professionals transform your vision into a world-class infrastructure project. We deliver results with precision, professionalism, and dedication.</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="contact.html" class="inline-block bg-[#F5B21B] hover:bg-amber-500 text-[#0A2342] font-bold px-8 py-3  transition-colors">Request a Quote</a>
+					<a href="services.html" class="inline-block border-2 border-[#F5B21B] text-[#F5B21B] hover:bg-[#F5B21B] hover:text-[#0A2342] font-bold px-8 py-3  transition-colors">Explore Services</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="flex flex-col md:flex-row gap-3 justify-center items-center  text-white text-6xl md:text-8xl font-extrabold tracking-wide py-12">
+		<h1 class="bg-[#0A2342]">LET'S</h1>
+		<h1 class="bg-[#F5B21B]">WORK</h1>
+	</div>
+
+	
 	<footer class="bg-[#0A2342] text-gray-100 mt-12" role="contentinfo" aria-labelledby="footer-heading">
 		<h2 id="footer-heading" class="sr-only">Footer</h2>
 
@@ -291,47 +398,58 @@
 
 				<!-- Language & Social (stack on mobile) -->
 				<div class="space-y-4">
-					<div>
-						<h3 class="text-lg font-semibold text-white">Language</h3>
-						<div class="mt-2 flex items-center space-x-3">
-							<a href="?lang=en" class="px-3 py-1  hover:bg-gray-700 rounded text-sm text-gray-200" aria-pressed="true">English</a>
-							<a href="?lang=sw" class="px-3 py-1 bg-transparent hover:bg-gray-800 rounded text-sm text-gray-200">Swahili</a>
-						</div>
-					</div>
+					
 
 					<div>
 						<h3 class="text-lg font-semibold text-white">Follow us</h3>
 						<div class="mt-3 flex items-center space-x-4">
-							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/facebook-new.png" alt="Facebook">
-							</a>
+                            <!-- Facebook -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2 transition-all duration-300 ease-in-out" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/facebook-new.png" alt="Facebook">
+                            </a>
 
-							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png" alt="Twitter">   
-							</a>
+                            <!-- Twitter / X -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2 transition-all duration-300 ease-in-out" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png" alt="Twitter">   
+                            </a>
 
-							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png" alt="LinkedIn">
-							</a>
+                            <!-- LinkedIn -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2 transition-all duration-300 ease-in-out" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                               <img src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png" alt="LinkedIn">
+                            </a>
 
-							<a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-								<img src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png" alt="Instagram">
-							</a>
-						</div>
+                            <!-- Instagram -->
+                            <a href="#" class="text-gray-300 hover:text-[#F5B21B] hover:scale-105 hover:translate-x-2 transition-all duration-300 ease-in-out" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png" alt="Instagram">
+                            </a>
+                        </div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Bottom small print -->
 			<div class="mt-10 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between">
-				<p class="text-sm text-gray-400">&copy; <span id="year"></span> HADA Investment Company Limited. All rights reserved.</p>
-				<div class="mt-4 md:mt-0 text-sm text-gray-400">
+				<p class="text-sm text-[#F5B21B]">&copy; <span id="year"></span> HADA Investment Company Limited. All rights reserved.</p>
+				<div class="mt-4 md:mt-0 text-sm text-[#F5B21B]">
 					<a href="privacy.html" class="hover:text-white mr-4">Privacy</a>
 					<a href="terms.html" class="hover:text-white">Terms</a>
 				</div>
 			</div>
 		</div>
 	</footer>
+	<div>
+    <div class="py-4">
+		<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const el = document.querySelector('[aria-label="site-credit"]');
+			if (el && !el.textContent.includes('™')) el.textContent = el.textContent.trim() + '™';
+		});
+		</script>
+			<div class="max-w-7xl mx-auto px-4 text-center">
+				<a class="cursor-pointer" href="https://dops.co.tz/"><p class="text-sm text-gray-400" aria-label="site-credit">Made by Dops Technology</p></a>
+			</div>
+		</div>
+    </div>
 
 	<script>
 		// set year
@@ -339,5 +457,52 @@
 	</script>
 
 	<script src="assets/js/main.js"></script>
-	</body>
-	</html>
+	<script>
+		// Initialize AOS after DOM is ready
+		document.addEventListener('DOMContentLoaded', function () {
+			if (window.AOS) {
+				AOS.init({ once: true, duration: 700, easing: 'ease-out-cubic' });
+			}
+		});
+
+		// Project filter functionality
+		document.addEventListener('DOMContentLoaded', function () {
+			const filterButtons = document.querySelectorAll('.filter-btn');
+			const projectCards = document.querySelectorAll('.project-card');
+
+			filterButtons.forEach(button => {
+				button.addEventListener('click', function () {
+					const filter = this.getAttribute('data-filter');
+
+					// Update active button state
+					filterButtons.forEach(btn => {
+						btn.classList.remove('active', 'text-[#F5B21B]', 'border-[#F5B21B]');
+						btn.classList.add('border-transparent', 'text-gray-300');
+					});
+					this.classList.add('active', 'text-[#F5B21B]', 'border-[#F5B21B]');
+					this.classList.remove('border-transparent', 'text-gray-300');
+
+					// Filter projects
+					projectCards.forEach(card => {
+						const cardCategory = card.getAttribute('data-category');
+						if (filter === 'all' || cardCategory === filter) {
+							card.style.display = 'block';
+							setTimeout(() => {
+								card.style.opacity = '1';
+							}, 10);
+						} else {
+							card.style.display = 'none';
+							card.style.opacity = '0';
+						}
+					});
+
+					// Reinitialize AOS for newly visible elements
+					if (window.AOS) {
+						AOS.refresh();
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>
