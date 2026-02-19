@@ -180,20 +180,21 @@
 
 				<!-- Filter Buttons -->
 				<div class="flex flex-wrap justify-center gap-3 mb-8">
-					<button class="filter-btn active px-6 py-2 border-b-2 border-[#F5B21B] text-[#F5B21B] font-semibold transition-colors hover:text-white" data-filter="all">All Projects</button>
-					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="civil">Civil works</button>
-					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="building">Buildings</button>
+					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="lists">Lists</button>
+					<button class="filter-btn active px-6 py-2 border-b-2 border-[#F5B21B] text-[#F5B21B] font-semibold transition-colors hover:text-white" data-filter="all">Projects Visuals</button>
+					<button class="filter-btn px-6 py-2 border-b-2 border-transparent text-gray-300 font-semibold transition-colors hover:text-white hover:border-[#F5B21B]" data-filter="civil">Civil Works Visuals</button>
+					
 					
 				</div>
 			</div>
 		</section>
 
 		<!-- Projects Grid Section -->
-		<section class="py-20 bg-white">
+		<section class="py-20 bg-white" id="projectsGridSection">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 					<!-- Project Card 1 -->
-					<div class="project-card group" data-category="civil" data-aos="fade-up">
+					<div class="project-card group" data-category="civil lists" data-aos="fade-up">
 						<div class="relative overflow-hidden bg-gradient-to-br  rounded-lg aspect-video mb-6">
 							<div class="absolute inset-0 flex items-center justify-center">
 								<img src="assets/projects/road.jpg" alt="Road maintenance work along Dodoma Kintiku" loading="lazy" width="800" height="450">
@@ -219,7 +220,7 @@
 					</div>
 
 					<!-- Project Card 2 -->
-					<div class="project-card group" data-category="civil" data-aos="fade-up" data-aos-delay="100">
+					<div class="project-card group" data-category="civil lists" data-aos="fade-up" data-aos-delay="100">
 						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
 							<div class="absolute inset-0 flex items-center justify-center">
 								<img src="assets/projects/top.jpeg" alt="Bridge construction project" loading="lazy" width="800" height="450">
@@ -245,7 +246,7 @@
 					</div>
 
 					<!-- Project Card 3 -->
-					<div class="project-card group" data-category="civil" data-aos="fade-up" data-aos-delay="200">
+					<div class="project-card group" data-category="civil lists" data-aos="fade-up" data-aos-delay="200">
 						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
 							<div class="absolute inset-0 flex items-center justify-center">
 								<img src="assets/projects/roadhea.jpg" alt="Road repairing and maintenance" loading="lazy" width="800" height="450">
@@ -271,7 +272,7 @@
 					</div>
 
 					<!-- Project Card 4 -->
-					<div class="project-card group" data-category="civil" data-aos="fade-up" data-aos-delay="300">
+					<div class="project-card group" data-category="civil lists" data-aos="fade-up" data-aos-delay="300">
 						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
 							<div class="absolute inset-0 flex items-center justify-center">
 								<img src="assets/projects/side3.jpg" alt="Road infrastructure construction" loading="lazy" width="800" height="450">
@@ -297,7 +298,7 @@
 					</div>
 
 					<!-- Project Card 5 -->
-					<div class="project-card group" data-category="industrial" data-aos="fade-up" data-aos-delay="400">
+					<div class="project-card group" data-category="industrial lists" data-aos="fade-up" data-aos-delay="400">
 						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
 							<div class="absolute inset-0 flex items-center justify-center">
 								<img src="assets/projects/BRIDGE.jpeg" alt="Bridge design and construction" loading="lazy" width="800" height="450">
@@ -322,7 +323,7 @@
 						</div>
 					</div>
 
-					<div class="project-card group" data-category="education" data-aos="fade-up" data-aos-delay="500">
+					<div class="project-card group" data-category="education lists" data-aos="fade-up" data-aos-delay="500">
 						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
 							<div class="absolute inset-0 flex items-center justify-center">
 								<img src="assets/projects/bridge.jpg" alt="Bridge culvert construction" loading="lazy" width="800" height="450">
@@ -346,7 +347,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="project-card group" data-category="education" data-aos="fade-up" data-aos-delay="500">
+					<div class="project-card group" data-category="education lists" data-aos="fade-up" data-aos-delay="500">
 						<div class="relative overflow-hidden bg-gradient-to-br from-[#0A2342] to-[#0d2e52] rounded-lg aspect-video mb-6">
 							<div class="absolute inset-0 flex items-center justify-center">
 								<img src="assets/projects/bridgeA.jpg" alt="before and after bridge construction">
@@ -370,6 +371,228 @@
 							</a>
 						</div>
 					</div> 
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects List Table Section -->
+		<section class="hidden py-20 bg-white" id="projectsTableSection">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="overflow-x-auto border border-gray-300 rounded-lg shadow-md">
+					<table class="w-full">
+						<thead>
+							<tr class="bg-[#0A2342] text-white">
+								<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-sm">S/N</th>
+								<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-sm">Description</th>
+								<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-sm">Client</th>
+								<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-sm">Status</th>
+								<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-sm">Completion Date</th>
+								<th class="border border-gray-300 px-4 py-3 text-left font-semibold text-sm">Project Value (TZS)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">1</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construction of Storm Water Drainage at PUMA service Station in Kijichi, Dar es Salaam.</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">PIVOTEC Company Limited</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2021</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">29,980,310.40/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">2</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Spot Maintenance Works at Gantry Access road in Dar es Salaam.</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANZANIA INTERNATIONAL PETROELUM RESERVES LTD</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2022</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">42,598,000.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">3</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construction of 5 Cells Box Culvert along Nongwe – Lukinga in Gairo District.</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA MOROGORO</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2022</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">139,784,585.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">5</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine and Recurrent Maintenance works & Bridge Preventive Maintenance works along Gairo – Dodoma – Kintinku Trunk Road</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS - DODOMA (SUB CONTRACTOR UNDER NEDCK CONTRACTORS LTD)</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">444,140,000.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">6</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Reinstate of Asphalt Concrete (AC 14) at Dodoma Airport</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">BEST ONE LIMITED</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">9,929,700/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">7</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine and Recurrent maintenance works, Bridge preventive maintenance along Gairo – Dodoma – kintinku trunk road</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS - DODOMA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023-2024</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">335,000,000/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">8</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine/Recurrent maintenance works and Bridge preventive maintenance along Mtera - Dodoma - Bereko</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS - DODOMA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023-2024</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">313,450,000/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">9</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine Maintenance on Mangaka – Lumesule Trunk road and Bridge Preventive Maintenance of 27 Bridges</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS - MTWARA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023-2024</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">303,000,000/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">10</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construction of 1bridge in Ulanga District</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA - MOROGORO</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023-2024</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">95,004,000.30/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">11</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construction of Kwa Panya Box Culvert (1Nr) in Ubungo District</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA DAR ES SALAAM</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023-2024</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">185,497,640.15/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">12</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Urgent Construction of Ulaya Suspended Bridge along Zombo nyameni - Ulaya road in Kilosa district</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA - MOROGORO</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023-2024</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">109,205,800/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">13</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construction and Rehabilitation of Foot Suspension Bridge at Mbuga and Chigandugandu Village in Ulanga District</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA - MOROGORO</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2023-2024</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">249,459,374.10/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">14</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine And Recurrent Maintenance Works, Bridge Preventive Maintenance along Gairo – Dodoma – Kintinku Trunk Road</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS DODOMA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2024-2025</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">353,800,500/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">15</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine Maintenance on Mkungu - Masasi Trunk road and Bridge Preventive Maintenance</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS MTWARA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2024-2025</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">299,836,335/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">16</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Urgent Construction of Foot Suspended Bridge along Msikiti Mtendeni – Mndelani road in Kilosa District</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA MOROGORO</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2024-2025</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">130,513,000/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">17</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construct Drainage and Retaining wall at Kinzudi road</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">UBUNGO MUNICIPAL COUNCIL</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2024-2025</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">37,087,382.51/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">18</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construct Drainage and Retaining wall at Kinzudi road</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">UBUNGO MUNICIPAL COUNCIL</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2024-2025</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">219,967,300/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">19</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine Maintenance Along Masasi - Mangaka Trunk road and Bridge Preventive Maintenance of 20 Bridges</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS MTWARA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-semibold">Ongoing</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">296,230,000.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">20</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine Maintenance Along Mangaka - Lumesule Trunk road and Bridge Preventive Maintenance of 27 Bridges</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS MTWARA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-semibold">Ongoing</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">232,186,000.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">21</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine And Recurrent Maintanace Works Along Trunk And Regional Roads</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS DODOMA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-semibold">Ongoing</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">206,704,000.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">22</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine And Recurrent Maintanace Works Along Trunk And Regional Roads</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS DODOMA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-semibold">Ongoing</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">307,644,500.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">23</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Routine/Recurrent Maintenance Works Along Nandembo – Lumesule Paved Trunk Road</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TANROADS RUVUMA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-semibold">Ongoing</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">191,910,000.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">24</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construction of Mtipesa Box Culvert (1Nr) in Ubungo District</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA DAR ES SALAAM</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-semibold">Ongoing</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">195,455,771.66/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8] border-b border-gray-300">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">25</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Construction of foot Bridge in Ulanga District</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA MOROGORO</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">128,450,320.00/=</td>
+							</tr>
+							<tr class="hover:bg-[#F0F4F8]">
+								<td class="border border-gray-300 px-4 py-3 text-sm font-medium">26</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">Urgency Work for Construction of Pedestrian Suspended Bridge 40m Span Along Utengule- Magulilwa Road in Kilolo District</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">TARURA IRINGA</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+								<td class="border border-gray-300 px-4 py-3 text-sm">2025-2026</td>
+								<td class="border border-gray-300 px-4 py-3 text-sm font-semibold text-[#F5B21B]">98,389,000.00/=</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</section>
@@ -512,6 +735,8 @@
 		document.addEventListener('DOMContentLoaded', function () {
 			const filterButtons = document.querySelectorAll('.filter-btn');
 			const projectCards = document.querySelectorAll('.project-card');
+			const projectsGridSection = document.getElementById('projectsGridSection');
+			const projectsTableSection = document.getElementById('projectsTableSection');
 
 			filterButtons.forEach(button => {
 				button.addEventListener('click', function () {
@@ -525,19 +750,28 @@
 					this.classList.add('active', 'text-[#F5B21B]', 'border-[#F5B21B]');
 					this.classList.remove('border-transparent', 'text-gray-300');
 
-					// Filter projects
-					projectCards.forEach(card => {
-						const cardCategory = card.getAttribute('data-category');
-						if (filter === 'all' || cardCategory === filter) {
-							card.style.display = 'block';
-							setTimeout(() => {
-								card.style.opacity = '1';
-							}, 10);
-						} else {
-							card.style.display = 'none';
-							card.style.opacity = '0';
-						}
-					});
+					// Handle lists filter separately
+					if (filter === 'lists') {
+						projectsGridSection.classList.add('hidden');
+						projectsTableSection.classList.remove('hidden');
+					} else {
+						projectsGridSection.classList.remove('hidden');
+						projectsTableSection.classList.add('hidden');
+						
+						// Filter projects
+						projectCards.forEach(card => {
+							const cardCategories = card.getAttribute('data-category').split(' ');
+							if (filter === 'all' || cardCategories.includes(filter)) {
+								card.style.display = 'block';
+								setTimeout(() => {
+									card.style.opacity = '1';
+								}, 10);
+							} else {
+								card.style.display = 'none';
+								card.style.opacity = '0';
+							}
+						});
+					}
 
 					// Reinitialize AOS for newly visible elements
 					if (window.AOS) {
